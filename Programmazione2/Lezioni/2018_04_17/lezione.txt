@@ -1,0 +1,50 @@
+Lista: 
+    struttura dati lineare si differenzia dagli array perche' gli elementi in memoria non sono
+    necessariamente in zone contigue.
+    Quindi a differenza degli array la rappresentazione LOGICA e diversa dall'effettiva
+    rappresentazione FISICA
+
+Ho i dati cosi composti
+
+    1 2 3 4 5
+    3 7 5 4 1
+
+array          3 7 5 4 1 ...     rappresentazione lineare anche in memoria
+               0 1 2 3 4 ...     (dati contigui)
+
+lista         1 7 4 5 3 ...     rappresentazione scombinata dei dati in memoria   
+              0 1 2 3 4 ...     (dati non contigui)
+Per garantire la linearita' ogni elemento deve avere un riferimento all'elemento che lo segue
+n 
+VANTAGGI LISTA:
+-INSERIMENTO
+    Array:
+        per garantire la contiguita' dei dati devo shiftare tutti gli elementi ogni volta -> costo O(n))
+    Lista:
+        non ho gli elementi posizionati in modo non contiguo quindi mi basta solo spostare i riferimenti
+-CANCELLAZIONE
+    Array:
+        dopo aver eliminato l'elemento devo shiftare nel caso pessimo tutti gli elementi -> costo O(n)
+    Lista:
+        conoscendo l'elemento prima e quello dopo, elimino l'elemento desiderato e sistemo i riferimenti
+-GESTIONE DI LOCAZIONI DI MEMORIA INDIPENDENTI
+    Array:
+        se occupo tutto lo spazio a disposizione posso o raddoppiarlo o smettere di allocare
+    Lista:
+        i dati non sono contigui quindi non ho vincoli di spazio perche' posso aggiungere sempre nuovi elementi
+
+PASSIAMO AD IMPLEMENTARE
+
+Posso usare un altro vettore contentente, per ogni elemento, l'indice dell'elemento successivo usando un simbolo 
+(es. -1) per indicare che un determinato elemento non ha alcun successivo. Devo inoltare avere una variabile (es. h)
+che mantiene in memoria l'indice del primo elemento.
+
+Posso usare un unico vettore che contiene la coppia {elemento,indice del successivo} ed una variabile che contiene
+sempre l'indice del primo elemento. Implemento questa in implementazione_ibrida.cpp
+
+----------
+
+Suggerimenti
+    -Quando abbiamo elementi di gestione di memoria interna conviene sempre creare delle macro con DEFINE
+    -Consideriamo tutti i casi soprattutto quelli molto particolari come inserimento o cancellazione in testa o coda
+    

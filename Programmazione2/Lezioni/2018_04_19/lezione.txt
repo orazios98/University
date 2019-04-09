@@ -1,0 +1,55 @@
+Vogliamo superare il limite dovuto al fatto che decidiamo inizialmente quale dovra' essere la dimensione massima.
+Creo una locazione per ogni singolo elemento ogni volta che devo aggiungere un elemento e lo lego al precedente e 
+al successivo.
+Risolvo questo problema usando i puntatori, sto sostituendo quindi l'indice con l'indirizzo effettivo dell'elemento
+in memoria. A questo punto l'ultimo piuttosto che puntare a -1 puntera' a NULL.
+Ho quindi risolto il problema del limite degli elementi.
+
+Vediamo come funziona:
+    -Inserimento in testa:
+        *Alloco spazio per l'oggetto da inserire.
+        *Accedo alla testa e vedo che e' gia' piu' grande
+        *Il nuovo elemento punta alla testa
+        *Sposto la testa sul nuovo elemento
+    -Inserimento in mezzo:
+        *Creo lo spazio per il nuovo elemento
+        *Scorro la lista fino a quando non trovo un elemento piu' grande tenendo conto del precedente e del successivo
+        *Il nuovo elemento punta al successivo del suo precedente
+        *A questo punto il precedente del nuovo elemento punta al elemento nuovo che stiamo aggiungendo
+    -Inserimento in coda:
+        *Creo lo spazio per il nuovo elemento
+        *Scorro la lista (la scorrero' tutta) tenendo conto di precedente e successivo
+        *Il nuovo elemento punta adesso a NULL (successivo del suo precedente)
+        *Il precedente del nuovo elemento punta all'elemento che stiamo aggiungendo
+
+Conviene rispetto all'array dinamico perche' non devo ogni volta copiare tutti gli elementi
+
+Creo un iteratore per scorrere gli elementi:
+Due metodi:
+    -reset
+    -next:
+        perche' torno un puntatore ad intero e non un intero?
+        perche' l'utente puo' chiamare next anche alla fine dell'array e ritornando null non  ho ambigiuta'
+        con altri elementi
+    -has next
+
+Il limite di questa lista e' che ogni elemento conosce solo il suo successivo ma non il precedente e cio' invece 
+e' utile per esempio se voglio scorrere la lista all'indietro.
+
+Allora implemento una LISTA DOPPIAMENTE LINKATA
+Ogni elemento punta al suo precedente e al suo successivo.
+Ho due puntatori base: head e coda.
+Vantaggi:
+    Inserimento:
+        Non devo mantenere in memoria il prev perche' l'elemento conosce gia' il suo precedente
+    Eliminazione:
+        Trovo l'elemento da eliminare senza tenere niente in memoria. Dico al precedente di puntare al sucessivo ed
+        ho gia' finito.
+
+- SEMPLIFICA CODICE INSERT -
+
+Voglio modificare la mia struttura dati per far si che non abbia casi speciali in inserimento e cancellazione:
+    - tolgo head ed aggiungo un nodo particolare header
+    - tolgo tail ed aggiungo un nodo particolare chiamato trailer
+Devo inserire il nodo sempre tra due  nodi eliminando cosi tutti i casi speciali.
+

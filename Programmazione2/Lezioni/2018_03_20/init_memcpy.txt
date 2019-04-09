@@ -1,0 +1,24 @@
+#include <iostream>
+#include <fstream>
+#include <stdio.h>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    int const n=128; // deve essere potenza di 2 anche allocando in piu
+    int a[n];
+    a[0]=3; //voglio inizializzare tutto a 3
+    int dim=1; //parte di array gia' utilizzata
+    while(dim<128)
+    {
+        memcpy(a+dim,a,dim*4);
+        dim*=2;
+    }
+    for(int i=0;i<128;i++)
+    {
+        cout << a[i]<<" ";
+    }
+
+    return 0;
+}
