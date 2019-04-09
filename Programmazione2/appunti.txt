@@ -1,0 +1,42 @@
+Appunti Relativi ai BST:
+
+------------------------------------------
+INSERIMENTO
+
+1. Salvo la root in un nodo "node"
+2. Creo un nodo contenitore "p" inizializzato a NULL
+3. Devo posizionarmi al posto giusto per inserire il mio elemento x, 
+    quindi parto dalla root e controllo se x è maggiore vado a destra
+    se x è minore vado a sinistra.
+    ripeto tutto finchè node è diverso da NULL
+4. creo il mio nuovo nodo relativo all'elemento x
+5. incremento n
+6. controllo se p è uguale a null ho un'albero vuoto quindi dirò
+    root=newn;
+    return this;
+7. sennò vuol dire che p sarà il parent del nuovo nodo,
+    controllo: se x maggiore di p lo metto a destra
+    se x minore di p lo metto a sinistra
+8. setto che p è il parent di newn
+9. ritorno l'albero bts
+------------------------------------------
+
+Ricerca ricorsiva (ritorna un puntatore a nodo di tipo n)
+Riceve un puntatore ad un nodo di tipo n ed una chiave di tipo N x
+    1. primo if controlla se tmp è null in caso ritorna null
+    2. secondo if controlla se la chiave di tmp è uguale ad x ed in caso ritorna tmp
+    3. se x > chiave di tmp allora chiama la ricerca su tmp->getRight con chiave x
+    4.ritorno la ricerca su tmp->getLeft, x
+
+---------------------------------------
+
+cancellazione di un nodo da una BST
+
+1. cerco il nodo da eliminare
+2. se non è esiste finisco l'esecuzione
+3. se è esiste Salvo il genitore
+
+1° caso: se ha solo un figlio
+    1. decremento la n
+    2. salvo il figlio che tra i due non è null
+    3. 

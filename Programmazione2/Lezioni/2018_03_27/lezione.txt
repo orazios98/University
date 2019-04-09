@@ -1,0 +1,70 @@
+27/03/2018
+
+Algoritmo Stabile: Algoritmo che mette in ordine gli elementi rispettando l'ordine originale 
+                   in caso di elementi con la stessa priorita'
+
+SELECTION SORT: 
+    - Algoritmo non stabile che selezione ad ogni passo di computazione il minimo tra due elementi.
+    - Tramite qualche accorgimento si puo' rendere stabile: anziche' scambiare i due elementi shifto i precedenti 
+    nello spazio lasciato dal numero spostato in avanti. cosi facendo preservo sempre l'ordine iniziale
+    Complessita':
+        - sono previsti N passi per trovare il minimo
+        - ci vogliono N passi per lo shift nel caso peggiore
+        - 1 passo per mettere l'elemento all'inizio del vettore
+
+        O=N+N+1=2N+1
+        Somma
+
+        la Complessita' totale e' alla fine n^2
+
+INSERTION SORT:
+    - Scorro tutto l'array, ogni nuovo elemento che leggo lo inserisco nella posizione corretta all'interno
+      del mio sottoarrey gia' ordinato.
+    Complessita computazionale:
+        - Sommatoria che va da i=1 a n di i -> O=n^2 (caso peggiore)
+        - Conviene perche' nel caso migliore (array gia' ordinato): Sommatoria che va da i=1 a n di 1 -> O=n
+    Stabilita':
+        puo' essere reso stabile
+
+ORDINAMENTO RICORSIVO DOPPIO:
+    -prendo un array disordinato e lo divido a meta'
+    -ordino indipendentmente ciascun array
+    -unisco i due array ora ordinati con il natural merge
+    - non LAVORA IN LOCO perche' usa un'array di appoggio per ordinare
+    - molto molto piu veloce (vedi grafico sul quaderno)
+
+Rapporto tra le velocita'
+Insertion: 
+    Al primo livllo controlliamo tutti gli n elementi, ogni volta controlliamo un elemento in meno
+    al livello i -> n-1 
+    Complessita total di n^2
+
+mySort: 
+    livello i -> input= n/(2^i)
+    Al livello h avro': h->n/(2^h)=1
+    n=2^h
+    dove h e' il numero di livelli quindi avro':
+    h=logaritmo in base 2 di n
+    O=(n log n)
+
+______________________________
+
+Per conoscere la durata d'esecuzione di una funzione o di un procedura posso usare la libreria time.h
+Dichiarare due variabili:
+    clock_t inizio, fine;
+prima di eseguire la funzione salvo il valore di clock
+    inizio=clock();
+dopo eseguo la mia funzione e salvo nuovamente il clock
+    fine=clock();
+facendo la differenza tra fine e inizio posso vedere quanti cicli di clock ci sono voluti
+    float n_clock=fine-inizio;
+Vedi calcolo_tempo.cpp
+
+------------------------------
+
+In caso di array gia' ordinato si comporta meglio l'insertion sort 
+
+-------------------------------------------
+
+Il metodo mySort in realta' prende il nome di mergeSort ed e' ancora possibile migliorarlo solamente dividendo in
+piu' parti ancora l'array

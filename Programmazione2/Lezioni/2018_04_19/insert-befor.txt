@@ -1,0 +1,33 @@
+DList *insert(int e)
+        {
+            Nodo *i = head;
+            while(i!=NULL && i->getKey()<e)
+                i=i->getNext();
+            Nodo *node=new Nodo(e);
+
+            if(i==NULL)
+            {
+                if(!tail && tail == head)
+                {
+                    head = tail = node;
+                }
+                else
+                {
+                    tail->setNext(node);
+                    node->setPrev(tail);
+                    tail = node;
+                }
+            }
+            else
+            {
+                if(i->getPrev()) 
+                    i->getPrev()->setNext(node); //l'elemento prima punta al nuovo elemento
+                else 
+                    head = node;
+                node->setPrev(i->getPrev());
+                node->setNext(i);
+                i->setPrev(node);
+            }
+            n++;
+            return this;
+        }

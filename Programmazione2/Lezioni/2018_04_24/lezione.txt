@@ -1,0 +1,30 @@
+Template: creiamo delle interfacce, solitamente non e' necessario che ogni classe   
+debba per forza riscrivere il metodo ma se vogliamo forzare mettiamo "=0"
+
+La classe DList e' derivata da Set con 
+:public 
+    Tutto il codice viene ereditato mantenendo le visibilita' della superclasse
+:protected
+    Eredita anche le protected e le public diventano protected
+:private
+    Eredita tutto in modo private
+
+Attenzione: nell'interfaccia se abbiamo funzioni virtuali pure dobbiamo ridefinirle tutte
+
+
+Passiamo a Implementazione Ricorsiva( + elegante)
+1) Lista vuota
+2) Nodo collegato a lista
+
+cerca-ricorsivo
+Il risultato e' unico  viene propagato a ritroso
+
+inserimento ricorsivo
+se voglio inserire un elemento in una lista ordinata, parto a cercare dalla testa in modo ricorsivo
+finche' non trovo un  elemento piu' grande
+
+----------
+Creiamo classe coppia
+coppia a(x,y)<coppia b(w,z) se x<w o 
+                            se x=w e y<z
+                            

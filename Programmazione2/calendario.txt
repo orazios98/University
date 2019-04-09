@@ -1,0 +1,23 @@
+20 Marzo:
+    - Ricorsione:
+        -Torri di Anoi
+        -
+    -
+27 Marzo:
+    - Algoritmi di Ordinamento (insertion, selection e merge)
+30 Marzo:
+    -Continuo Algoritmi di Ordinamento
+    -Trova valore al n-esima posizione in un array
+10 Aprile:
+    -Classi:
+        - Ripasso
+        - Creazione di una struttura dati
+12 Aprile:
+    -Classi:
+        -Aspetti Caratteristici della OOP
+17 Aprile:
+    -Le Liste:
+        Lista Ibrida con utilizzo di array
+19 Aprile:
+    -Liste:
+        Implementazione corretta
