@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -78,6 +80,12 @@ template <class H> class MaxHeap
 
         int size() { return heapsize; }
 
+        void buildMaxHeap()
+        {
+            for(int i=heapsize/2;i>0;i--)
+                heapify(i);
+        }
+
         void print()
         {
             cout<<"HEAP : ";
@@ -86,19 +94,75 @@ template <class H> class MaxHeap
             cout<<endl;
         }
 
-        void buildMaxHeap()
+        void printfile(ofstream& f)
         {
-            for(int i=heapsize/2;i>0;i--)
-                heapify(i);
+            for(int i=1;i<heapsize;i++)
+                f<<*A[i]<<" ";
+            f<<endl;
         }
+
+        
 };
 
 int main()
 {
-    MaxHeap <int> *M = new MaxHeap<int>(10);
-    M->enqueue(50)->enqueue(5)->enqueue(15);
-    M->print();
-    M->buildMaxHeap();
-    M->print();
-    return 1;
+    ifstream infile("input.txt");
+    ofstream outfile("output.txt");
+    string line;
+    int n;
+    string tipo;
+    while(getline(infile,line))
+    {
+        istringstream iss(line);
+        iss>>tipo>>n;
+        if(tipo=="int")
+        {
+            int t;
+            MaxHeap<int> *M=new MaxHeap<int>(n);
+            for(int i=0;i<n;i++)
+            {
+                iss>>t;
+                M->enqueue(t);
+            }
+            M->buildMaxHeap();
+            M->printfile(outfile);
+        }
+        if(tipo=="double")
+        {
+            double t;
+            MaxHeap<double> *M=new MaxHeap<double>(n);
+            for(int i=0;i<n;i++)
+            {
+                iss>>t;
+                M->enqueue(t);
+            }
+            M->buildMaxHeap();
+            M->printfile(outfile);
+        }
+        if(tipo=="bool")
+        {
+            bool t;
+            MaxHeap<bool> *M=new MaxHeap<bool>(n);
+            for(int i=0;i<n;i++)
+            {
+                iss>>t;
+                M->enqueue(t);
+            }
+            M->buildMaxHeap();
+            M->printfile(outfile);
+        }
+        if(tipo=="char")
+        {
+            char t;
+            MaxHeap<char> *M=new MaxHeap<char>(n);
+            for(int i=0;i<n;i++)
+            {
+                iss>>t;
+                M->enqueue(t);
+            }
+            M->buildMaxHeap();
+            M->printfile(outfile);
+        }
+    }
+
 }

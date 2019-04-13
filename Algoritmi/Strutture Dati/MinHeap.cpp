@@ -92,11 +92,7 @@ template <class H> class MinHeap
         void buildMinHeap()
         {
             for(int i=heapsize/2;i>0;i--)
-            {
-                cout<<heapsize<<endl;
-                cout<<i<<endl;
                 heapify(i);
-            }
         }
 };
 
