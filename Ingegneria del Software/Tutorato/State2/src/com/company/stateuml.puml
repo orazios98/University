@@ -1,0 +1,27 @@
+@startuml
+scale 350 width
+[*] -right-> InPiedi
+
+InPiedi : sparare (50)
+InPiedi : imprecare
+
+Accovacciato -right-> Sdraiato : abbassa
+Sdraiato -right-> Accovacciato : alza
+
+Sdraiato : sparare(200)
+
+InPiedi -left-> Salto : alza
+Salto -left-> InPiedi : abbassa
+
+Salto : impreca
+
+InPiedi -down-> Accovacciato : abbassa
+Accovacciato -down-> InPiedi : alza
+
+Accovacciato : sparare(100)
+Accovacciato : imprecare
+
+Sdraiato --> Sdraiato : abbassa
+Salto -down-> Sdraiato : alza
+
+@enduml

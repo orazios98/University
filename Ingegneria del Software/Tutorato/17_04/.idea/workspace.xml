@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbb5ad6f-4eff-4a96-ad08-34eb0461cc45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Auto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Berlina.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/CommonRail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Fire.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Garage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Mini.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Motore.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/17_04/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/17_04/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
@@ -258,12 +265,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555507698278</updated>
       <workItem from="1555507702094" duration="3505000" />
-      <workItem from="1555575662947" duration="704000" />
+      <workItem from="1555575662947" duration="1357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4209000" />
+    <option name="totallyTimeSpent" value="4862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,7 +283,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -287,7 +293,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3294702" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3294702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

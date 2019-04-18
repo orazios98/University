@@ -1,0 +1,38 @@
+@startuml
+
+interface Postura
+class Player
+class ArchibugereNano
+class Sdraiato
+class Accovacciato
+class InPiedi
+class Salto
+
+Postura <|.. Sdraiato
+Postura <|.. InPiedi
+Postura<|.. Salto
+Postura<|.. Accovacciato
+Player -|> ArchibugereNano
+ArchibugereNano -|> Postura
+
+class ArchibugereNano
+{
+    - p : Postura
+    + spara()
+    + insultaElfo()
+    + alza ()
+    + abbassa ()
+}
+
+interface Postura
+{
++ fuoco()
++ impreca()
++ alza() : Postura
++ abbassa() : Postura
+}
+
+
+
+
+@enduml
