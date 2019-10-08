@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1db2623-1f55-4b8b-b442-54bb006083b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../State/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/Accovacciato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/ArchibugereNano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/InPiedi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/Postura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/Salto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/Sdraiato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/stateuml.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../State/src/com/company/uml.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../17_04/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../17_04/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../19_04/src/com/company/Goblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19_04/src/com/company/Goblin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../19_04/src/com/company/Pelleverde.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19_04/src/com/company/Pelleverde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../19_04/src/com/company/TheGoblin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../19_04/src/com/company/TheGoblin.java" afterDir="false" />
-    </list>
+    <list default="true" id="d1db2623-1f55-4b8b-b442-54bb006083b0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +203,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Scrivania" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -261,16 +246,15 @@
       <updated>1555594205151</updated>
       <workItem from="1555594209879" duration="674000" />
       <workItem from="1555594908981" duration="3189000" />
-      <workItem from="1555598371578" duration="712000" />
+      <workItem from="1555598371578" duration="861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4575000" />
+    <option name="totallyTimeSpent" value="4724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25757575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
